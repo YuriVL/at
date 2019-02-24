@@ -6,7 +6,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-frontend',
-    'name' => 'Autotur.by',
+    'name' => 'auto-tur.by',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
@@ -48,15 +48,7 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-
-        'urlManager' => [
-            'enablePrettyUrl' => true,
-            'showScriptName' => false,
-            'rules' => [
-                'class' => 'yii\rest\UrlRule',
-                'controller' => 'api'
-            ],
-        ],
+        'urlManager'=>require(__DIR__.'/_urlManager.php'),
         'view' => [
             'class' => '\frontend\components\FrontendView',
             'enableMinify' => !YII_DEBUG,
