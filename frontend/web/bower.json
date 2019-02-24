@@ -1,0 +1,16 @@
+{
+  "name": "autotur",
+  "description": "autotur",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components"
+  ],
+  "dependencies": {},
+  "devDependencies": {    
+  }
+}

@@ -1,0 +1,51 @@
+{
+    "name": "yiisoft/autotur",
+    "description": "Site autotur.by",
+    "keywords": ["yii2", "framework", "advanced", "autotur"],
+    "homepage": "http://www.autotur.by/",
+    "type": "project",
+    "license": "BSD-3-Clause",
+    "support": {
+        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
+        "forum": "http://www.yiiframework.com/forum/",
+        "wiki": "http://www.yiiframework.com/wiki/",
+        "irc": "irc://irc.freenode.net/yii",
+        "source": "https://github.com/yiisoft/yii2"
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "^2.0.12@dev",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-widget-select2": "@dev",
+        "dmstr/yii2-adminlte-asset": "2.*",
+        "kartik-v/yii2-widget-activeform": "dev-master",
+        "kartik-v/yii2-widget-timepicker": "*",
+        "asofter/yii2-imperavi-redactor": "*",
+        "kartik-v/yii2-widget-datepicker": "dev-master",
+        "zxbodya/yii2-gallery-manager": "*@dev",
+        "rmrevin/yii2-minify-view": "^2.0"
+    },
+    "require-dev": {
+        "yiisoft/yii2-debug": "~2.0.0",
+        "yiisoft/yii2-gii": "~2.0.0",
+        "yiisoft/yii2-faker": "~2.0.0",
+        "codeception/base": "^2.4.0",
+        "phpunit/phpunit": "~6.5.5",
+        "codeception/verify": "~1.0.0"
+    },
+    "config": {
+        "process-timeout": 1800,
+        "fxp-asset": {
+            "enabled": false
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ]
+}
