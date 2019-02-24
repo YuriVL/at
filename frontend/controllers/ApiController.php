@@ -16,7 +16,7 @@ class ApiController extends Controller
         return [
             [
                 'class' => 'yii\filters\ContentNegotiator',
-                'only' => ['add'],
+                'only' => ['book', 'send-message'],
                 'formats' => [
                     'application/json' => Response::FORMAT_JSON,
                 ],

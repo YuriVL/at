@@ -13,7 +13,6 @@ return [
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
-            'cookieValidationKey' => 'GyXjJwmFU0yFfIULVihVPFgqDTOSavCo',
             'parsers' => [
                 'application/json' => 'yii\web\JsonParser'
             ],
