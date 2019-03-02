@@ -10,6 +10,7 @@ body{
 	background:#f6f6f6;
     color: #373a3c;
 	font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
  }
 h1,h2,h3,h4,h5,h6{
 	margin:0;	
@@ -17,7 +18,7 @@ h1,h2,h3,h4,h5,h6{
 }	
 p{
 	margin:0;
-	line-height:2;
+	line-height:1.8;
     text-align:justify;
 }
 ul{
@@ -25,7 +26,7 @@ ul{
 	padding:0;
 }
 p,ul,ol{
-	font-size:1em;
+	font-size:14px;
 }
 
 .jarallax {
@@ -128,7 +129,7 @@ input[type="submit"],a{
 	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .phone__list {
-    font-size: 2em;
+    font-size: 25px;
     display: block;
     color: #ad101c;
     background: rgba(255, 255, 255, .9);
@@ -186,7 +187,7 @@ input[type="submit"],a{
 /* Miranda */
 .menu--miranda .menu__item {
 	position: relative;
-	margin: 1em 1em;
+    margin: 5px 5px;
 }
 .menu--miranda .menu__item:last-child{
 	margin-right:0;
@@ -395,7 +396,7 @@ input[type="submit"],a{
 .banner-posit h2 span {
     color: #ffffff;
     font-size: 0.7em;
-    top: -2.3em;
+    top: -25px;
     left: 3.5em;
 }
 .reservation h5{
@@ -415,7 +416,7 @@ input[type="submit"],a{
 .book-form h3 {
     color: #ad101c;
     text-transform: uppercase;
-    font-size: 1.3em;
+    font-size: 18px;
     margin: 8px 0;
     letter-spacing: 1px;
 	font-weight:600;
@@ -432,7 +433,7 @@ h3.w3ls-h3{
     color: #373a3c !important;
     outline: none;
 	margin:10px  0;
-    font-size: 0.95em;
+    font-size: 14px;
     transition: 0.5s all;
     -webkit-transition: 0.5s all;
     -o-transition: 0.5s all;
@@ -450,7 +451,7 @@ h3.w3ls-h3{
 select.ship-sel {
     width: 100%;
     padding: 10px;
-	font-size:0.95em;
+	font-size:14px;
     background: transparent;
     outline: none;
 	color: #55595c;
@@ -528,12 +529,12 @@ option{
     background-color: #ffffff;
 }
 .jarallax__ticket__datetime .datetime {
-    font-size: 2.3em;
+    font-size: 25px;
     line-height: 1;
     text-align: left;
 }
 .jarallax__ticket__datetime .datetime > span {
-    font-size: 0.5em;
+    font-size: 14px;
    /* border-bottom: 0.1em solid #ad101c;*/
     transform: translateY(-0.3em);
     position: absolute;
@@ -551,7 +552,7 @@ option{
 }
 
 .jarallax__ticket__info .title {
-    font-size: 2.3em;
+    font-size: 22px;
     line-height: 1;
     text-align: left;
     color: #cd051c;
@@ -566,6 +567,10 @@ option{
     position: absolute;
     right: 1em;
     top: 0;
+}
+
+.jarallax__ticket__info .additional ul {
+    font-size: 14px;
 }
 .jarallax__ticket__info .additional ul li:first-child {
     margin-bottom: 1em;
@@ -596,7 +601,7 @@ option{
     float: left;
 }
 .jarallax__ticket__order .price {
-    font-size: 2.1em;
+    font-size: 22px;
     text-align: center;
 }
 /*tickets*/
@@ -605,7 +610,7 @@ h3.agileits-title {
     text-align: center;
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 2.3em;
+    font-size: 25px;
     color: #373a3c;
     margin-bottom: 1em;
 }
@@ -621,7 +626,7 @@ h3.agileits-title {
     list-style-position: inside;
 }
 .w3_agileits-ab-main h4 {
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: 600;
     letter-spacing: 0.5px;
     margin-bottom: 0.5em;
@@ -678,7 +683,7 @@ p.direction-text-w3l{
     color: #373a3c;
     letter-spacing: 1px;
     margin: 0.7em 0;
-    font-size: 1.8em;
+    font-size: 22px;
     font-weight: 600;
     text-transform: uppercase;
     display: inline;
@@ -694,9 +699,10 @@ h3.h3-w3l {
     text-transform: uppercase;
     font-weight: 800;
 }
+
 h3.h3-w3l, span.h3-w3l {
     color: #373a3c;
-    font-size: 2.3em;
+    font-size: 25px;
     text-transform: uppercase;
     font-weight: 800;
     line-height: 1.3;
@@ -704,12 +710,16 @@ h3.h3-w3l, span.h3-w3l {
     margin-top: 2.5em;
     padding-right: 1em;
 }
+
+span.h3-w3l {
+    font-size: 45px;
+}
 span.h3-w3l  {
     color: #ad101c;
 }
 h4.h3-w3l {
     color: #373a3c;
-    font-size: 1.5em;
+    font-size: 18px;
     font-weight: 600;
     text-transform: capitalize;
     margin: 1em 0 0.5em;
@@ -765,7 +775,7 @@ h4.h3-w3l {
 }
 .w3ls-hover .view-caption h5{
 	color: #ffffff;
-	font-size: 2.2em;
+	font-size: 18px;
 	font-weight: normal;
 	margin-bottom: 15px;
 	margin-top: 5px;
@@ -830,7 +840,7 @@ p.agile-tab-txt {
     margin: 1em 0 0;
 }
 .resp-vtabs .resp-tabs-list li:hover{
-	background:#ed3931;
+	background:#ad101c;
 }
 .tab-bottom p {
     font-style: italic;
@@ -844,9 +854,10 @@ p.agile-tab-txt {
 }
 .tabs-right1 h6 {
     color: #373a3c;
-    font-size: 1.5em;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 600;
     margin-bottom: 1em;
+    text-transform: uppercase;
 }
 .tabs-right1 p {
     color: #373a3c;
@@ -890,7 +901,7 @@ p.agile-tab-txt {
 	color:#ffffff;
 }
 .tab1 h3 {
-    font-size: 1.1em;
+    font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
     padding: 0.2em 1em;
@@ -959,9 +970,9 @@ p.agile-tab-txt {
 }
 .feature-txt h4 {
     text-transform: capitalize;
-    font-size: 1.3em;
+    font-size: 25px;
     color: #ffffff;
-    padding: 0.5em 2em;
+    padding: 0.5em 1.8em;
     background: #ad101c;
     position: relative;
     display: inline-block;
@@ -970,7 +981,7 @@ p.agile-tab-txt {
 .feature-txt h4:before, .fm-right .feature-txt h4:before {
     content: '';
     position: absolute;
-    top: 19px;
+    top: 25px;
     right: -100px;
     display: block;
     background: #ad101c;
@@ -980,7 +991,7 @@ p.agile-tab-txt {
 .feature-txt h4:after, .fm-right .feature-txt h4:after {
     content: '';
     position: absolute;
-    top: 14px;
+    top: 20px;
     right: 5px;
     display: block;
     background: #ffffff;
@@ -1334,7 +1345,8 @@ div#contact {
     padding-left: 6em;
 }
 .contact-form h5 {
-    font-size: 1.7em;
+    font-size: 18px;
+    font-weight: 600;
     color: #373a3c;
     text-transform: capitalize;
 }
@@ -1395,7 +1407,7 @@ input.email {
     outline: none;
     color: #ffffff;
     padding: .8em 3em;
-    font-size: 1em;
+    font-size: 14px;
     margin: 1em 1em 0 0;
     -webkit-appearance: none;
     transition: 0.5s all;
@@ -1521,7 +1533,7 @@ input.email {
 
 .button a {
     font-weight: 600;
-    font-size: 1em !important;
+    font-size: 14px;
     color:#ffffff !important;
 	text-decoration: none !important;
 	transition: 0.5s all;
@@ -1551,7 +1563,7 @@ input.email {
 }
 .modal-header h5 {
     color: #f44639;
-    font-size: 1.3em;
+    font-size: 18px;
     letter-spacing: 1px;
    text-align:center;
 }
@@ -1721,7 +1733,7 @@ input.email {
         padding: 0;
 	}
 	.tabs-right1 h6 {
-       font-size: 1.3em;
+       font-size: 18px;
 	}
 	.tabs-right2 img {
 		width: 100%;
@@ -1733,7 +1745,7 @@ input.email {
 		padding: 22px 17px;
 	}
 	.tabs-right1 p {
-		font-size: 0.95em;
+		font-size: 14px;
 	}
 	h3.agileits-title {
        font-size: 2em;
@@ -1749,13 +1761,13 @@ input.email {
 		width: 63%;
 	}
 	.w3ls-hover .view-caption h5 {
-		font-size: 2em;
+		font-size: 18px;
 	}
 	.w3ls-hover .view-caption {
 		padding: 6em 0;
 	}
 	h3.h3-w3l {
-		font-size: 2.3em;
+		font-size: 25px;
 		width: 70%;
 	}
 	.contact-form h5 {
@@ -1960,7 +1972,7 @@ input.email {
     }
     .jarallax__ticket__order .price {
         text-align: center;
-        font-size: 2.3em;
+        font-size: 25px;
         color: #ad101c;
         display: inline;
     }
@@ -1968,7 +1980,7 @@ input.email {
         text-align: right;
     }
     .jarallax__ticket__datetime .datetime {
-        font-size: 1.8em;
+        font-size: 22px;
         display: inline;
         text-align: right;
     }
@@ -2101,6 +2113,9 @@ input.email {
         background: url(../images/slide2.jpg) no-repeat right;
         background-size: cover
     }
+    .jarallax__ticket {
+        padding: 1em;
+    }
 }
 @media screen and (max-width: 736px){
 	.book-form h3 {
@@ -2158,7 +2173,7 @@ input.email {
 		font-size: 6em;
 	}
 	h4.h3-w3l {
-		font-size: 1.3em;
+		font-size: 18px;
 	}
 	h3.h3-w3l {
 		font-size: 1.7em;
@@ -2397,7 +2412,7 @@ input.email {
 		padding: 0;
 	}
 	h3.h3-w3l {
-		font-size: 1.3em;
+		font-size: 18px;
 		margin: 2em 0 0em;
 		line-height:1.7;
 	}
@@ -2433,7 +2448,7 @@ input.email {
 		font-size: 0.8em; 
 	}
 	.w3ls-hover .view-caption h5 {
-		font-size: 1.3em;
+		font-size: 18px;
 		margin-bottom: 10px;
 	} 
 	.wthree_team_grid_left figure .w3l_banner_figure {
@@ -2449,7 +2464,7 @@ input.email {
 		width: 50%;
 	}
 	.contact-form h5 {
-		font-size: 1.3em; 
+		font-size: 18px; 
 	}
 	input.email {
 		margin: 1em 0 0;
@@ -2479,11 +2494,11 @@ input.email {
 		font-size: 1.8em;
 	}
 	.banner-info h3 {
-		font-size: 2.3em;
+		font-size: 25px;
 	}
 	.banner-info p{
 		letter-spacing:0px;
-		font-size:0.95em;
+		font-size:14px;
 	}
 	.banner-posit {
 		width: 74%;
@@ -2640,7 +2655,7 @@ input.email {
 		padding: 0;
 	}
     .jarallax__ticket__info .title {
-        font-size: 1.3em;
+        font-size: 18px;
     }
     .jarallax__ticket__datetime .datetime {
         font-size: 1.5em;
@@ -2652,7 +2667,10 @@ input.email {
         top: 135px;
     }
     .jarallax__ticket__order .price {
-        font-size: 1.5em;
+        font-size: 18px;
+    }
+    span.h3-w3l {
+        font-size: 25px;
     }
 
 }

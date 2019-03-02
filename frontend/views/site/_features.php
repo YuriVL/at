@@ -15,13 +15,13 @@
     </div>
     <div class=" col-md-4 col-sm-4 col-xs-4 feature-main fm-right">
         <div class="feature-txt">
-            <h4><i class="fa fa-television" aria-hidden="true"></i>dvd-проигрыватель</h4>
-        </div>
-        <div class="feature-txt">
             <h4><span class="glyphicon glyphicon-asterisk"></span>кондиционер</h4>
         </div>
         <div class="feature-txt">
             <h4><i class="fa fa-wifi" aria-hidden="true"></i>wi-fi</h4>
+        </div>
+        <div class="feature-txt">
+            <h4><i class="fa fa-television" aria-hidden="true"></i>dvd</h4>
         </div>
     </div>
 </div>
