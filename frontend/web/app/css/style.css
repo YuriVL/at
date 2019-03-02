@@ -187,7 +187,7 @@ input[type="submit"],a{
 /* Miranda */
 .menu--miranda .menu__item {
 	position: relative;
-    margin: 5px 5px;
+    margin: 5px 15px;
 }
 .menu--miranda .menu__item:last-child{
 	margin-right:0;
