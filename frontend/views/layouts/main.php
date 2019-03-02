@@ -54,6 +54,7 @@ $dictionary = (Dictionary::getInstance())->dictionary;
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/app/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+    <meta name="yandex-verification" content="1b515ebf32214db7" />
     <script> window.mapsrc = "https://yandex.by/map-widget/v1/-/CBqE5TTigA"; </script>
     <!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(52528012, "init", { id:52528012, clickmap:true, trackLinks:true, accurateTrackBounce:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/52528012" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
     <?php $this->head() ?>
