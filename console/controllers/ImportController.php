@@ -9,7 +9,7 @@ class ImportController extends Controller
 
     public function actionCsv()
     {
-        $directory= '/home/autotur1/backup';
+        $directory= '/home/autotur1/backup/';
         //$directory= '/home/vagrant/www/autotur/';
 
         $FILE = $directory . 'booking_' . date('Y-m-d') . '.csv';
