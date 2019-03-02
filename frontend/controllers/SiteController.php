@@ -55,4 +55,9 @@ class SiteController extends Controller
             'contact' => $contact
         ]);
     }
+
+    public function actionApi()
+    {
+        echo 'ok';
+    }
 }

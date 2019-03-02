@@ -1,0 +1,13 @@
+Options +FollowSymLinks
+#IndexIgnore */*
+RewriteEngine on
+RewriteBase /
+
+# переносим все что начинается с "www" на БЕЗ "www"
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+# otherwise forward it to index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . index.php [L]

@@ -56,4 +56,6 @@ storage/web/adminer
 #minify
 frontend/web/minify/*
 
+*.sh
+
 
