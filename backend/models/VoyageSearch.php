@@ -78,7 +78,7 @@ class VoyageSearch extends SystemLinkDirection
         if(isset($params['date'])){
              $query->andFilterWhere(['>=', 'dispatch', $params['date']]);
         }
-        $query->orderBy(['dispatch' => SORT_DESC]);
+        $query->orderBy(['dispatch' => SORT_ASC]);
         return $dataProvider;
     }
 }
