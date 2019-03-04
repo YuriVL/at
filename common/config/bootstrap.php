@@ -7,5 +7,5 @@ Yii::setAlias('@console', dirname(dirname(__DIR__)) . '/console');
 /**
  * Setting url aliases
  */
-Yii::setAlias('@frontendUrl', 'http://autotur.loc');
-Yii::setAlias('@backendUrl', 'http://admin.autotur.loc');
+Yii::setAlias('@frontendUrl', 'http://auto-tur.by');
+Yii::setAlias('@backendUrl', 'http://admin.auto-tur.by');
