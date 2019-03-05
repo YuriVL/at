@@ -58,7 +58,7 @@ if (in_array($model['iddirection'], [2, 6])) {
         </div>
     </div>
     <div class="col-md-2 col-xs-12 jarallax__ticket__order">
-        <div class="price"><?= $model['price'] / 1000 ?>р.</div>
+        <div class="price"><?= $model['price'] / 10000 ?>р.</div>
         <div class="button">
             <?php
                 echo Html::a('Бронировать', '#', [
