@@ -12,12 +12,12 @@ class ImportController extends Controller
         $directory= '/home/autotur1/backup/';
         //$directory= '/home/vagrant/www/autotur/';
 
-        $FILE = $directory . 'booking_' . date('Y-m-d') . '.csv';
-        $this->insert($FILE, new \common\models\SystemBooking());
+        //$FILE = $directory . 'booking_' . date('Y-m-d') . '.csv';
+        //$this->insert($FILE, new \common\models\SystemBooking());
         $FILE = $directory . 'date_' . date('Y-m-d') . '.csv';
         $this->insert($FILE, new \common\models\SystemDate());
-        $FILE = $directory . 'time_' . date('Y-m-d') . '.csv';
-        $this->insert($FILE, new \common\models\SystemTime());
+        //$FILE = $directory . 'time_' . date('Y-m-d') . '.csv';
+        //$this->insert($FILE, new \common\models\SystemTime());
         $FILE = $directory . 'link_direction_' . date('Y-m-d') . '.csv';
         $this->insert($FILE, new \common\models\SystemLinkDirection());
     }
