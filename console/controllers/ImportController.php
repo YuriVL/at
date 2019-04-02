@@ -9,49 +9,58 @@ class ImportController extends Controller
 
     public function actionCsv()
     {
-        $directory= '/home/autotur1/backup/';
-        //$directory= '/home/vagrant/www/autotur/';
+        //$directory= '/home/autotur1/backup/';
+        $directory= '/home/vagrant/www/autotur/';
 
         //$FILE = $directory . 'booking_' . date('Y-m-d') . '.csv';
         //$this->insert($FILE, new \common\models\SystemBooking());
-        $FILE = $directory . 'date_' . date('Y-m-d') . '.csv';
-        $this->insert($FILE, new \common\models\SystemDate());
+        $date = (new \DateTime())->modify('-1 day');
+
+        $FILE = $directory . 'date_' . $date->format('Y-m-d') . '.csv';
+        echo $this->insert($FILE, new \common\models\SystemDate());
         //$FILE = $directory . 'time_' . date('Y-m-d') . '.csv';
         //$this->insert($FILE, new \common\models\SystemTime());
-        $FILE = $directory . 'link_direction_' . date('Y-m-d') . '.csv';
-        $this->insert($FILE, new \common\models\SystemLinkDirection());
+        $FILE = $directory . 'link_direction_' . $date->format('Y-m-d') . '.csv';
+        echo $this->insert($FILE, new \common\models\SystemLinkDirection());
     }
 
     private function insert($file, \yii\db\ActiveRecord $model)
     {
-        $sql = "";
-        $db =Yii::$app->getDb();
-        $db->createCommand('SET FOREIGN_KEY_CHECKS = 0')->execute();
-        $db->createCommand('TRUNCATE TABLE '.$model::tableName())->execute();
+        if(file_exists($file)){
+            $handle = fopen($file, 'r');
+            if($handle){
+                $sql = "";
+                $db =Yii::$app->getDb();
+                $db->createCommand('SET FOREIGN_KEY_CHECKS = 0')->execute();
+                $db->createCommand('TRUNCATE TABLE '.$model::tableName())->execute();
+                $attributes = $model->getAttributes();
+                $sql .= "INSERT INTO ".$model::tableName()."(";
+                foreach ($attributes as $attribute=>$value){
+                    $sql .="`".$attribute."`,";
+                }
+                $sql= substr($sql, 0, -1);
+                $sql.=") VALUES ";
+                while (($line = fgetcsv($handle)) !== FALSE) {
+                    $sql.="(";
 
-
-        $file = fopen($file, 'r');
-
-        $attributes = $model->getAttributes();
-        $sql .= "INSERT INTO ".$model::tableName()."(";
-        foreach ($attributes as $attribute=>$value){
-            $sql .="`".$attribute."`,";
-        }
-        $sql= substr($sql, 0, -1);
-        $sql.=") VALUES ";
-        while (($line = fgetcsv($file)) !== FALSE) {
-            $sql.="(";
-
-            foreach ($line as $value){
-                $sql .= "'".$value."',";
+                    foreach ($line as $value){
+                        $sql .= "'".$value."',";
+                    }
+                    $sql= substr($sql, 0, -1);
+                    $sql.="),";
+                }
+                $sql= substr($sql, 0, -1);
+                $sql.=";";
+                fclose($handle);
+                $db->createCommand($sql)->execute();
+                $db->createCommand('SET FOREIGN_KEY_CHECKS = 1')->execute();
+            } else {
+                return 'Couldn\'t open file - '.$file;
             }
-            $sql= substr($sql, 0, -1);
-            $sql.="),";
+        } else {
+            return 'No file found - '.$file;
         }
-        $sql= substr($sql, 0, -1);
-        $sql.=";";
-        fclose($file);
-        $db->createCommand($sql)->execute();
-        $db->createCommand('SET FOREIGN_KEY_CHECKS = 1')->execute();
+
+        return 'Inserted file - '.$file;
     }
 }
