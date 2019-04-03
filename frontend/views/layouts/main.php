@@ -31,26 +31,26 @@ $dictionary = (Dictionary::getInstance())->dictionary;
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
 
-    <link rel="shortcut icon" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/owl1.jpg" type="image/x-icon" />
     <!-- //font-awesome-icons -->
     <link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Istok+Web:400,400i,700,700i" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
           rel='stylesheet' type='text/css'>
 
-    <link rel="apple-touch-icon" sizes="60x60" href="/app/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="/app/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="/app/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="/app/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="/app/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/app/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="/app/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/app/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192"  href="/app/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/app/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="/app/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/app/images/favicon/favicon-16x16.png">
-    <link rel="manifest" href="/app/images/favicon/manifest.json">
+    <link rel="apple-touch-icon" sizes="60x60" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/x-icon" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/favicon.ico" >
+    <link rel="icon" type="image/png" sizes="192x192"  href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="<?php Yii::getAlias('@frontendUrl') ?>/app/images/favicon/manifest.json">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/app/images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
