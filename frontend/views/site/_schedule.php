@@ -25,7 +25,7 @@ if ($cols > 0) {
         <?php
         $begin = 0;
         for ($i = 0; $i < $cols; $i++) { ?>
-            <div class="jarallax__ticket item <?= ($i == 0) ? "active" : ""?>">
+            <div class="jarallax item <?= ($i == 0) ? "active" : ""?>">
                 <?php
                 $slice = array_slice($models, $begin, $limit);
                 foreach ($slice as $model) {

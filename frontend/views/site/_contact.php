@@ -40,7 +40,7 @@ $dictionary = (Dictionary::getInstance())->dictionary;
             <div class="address">
                 <h5>Email:</h5>
                 <p><i class="glyphicon glyphicon-envelope"></i> <a
-                        href="mailto:info@example.com">autotur.by@gmail.com</a></p>
+                        href="autotur.by@gmail.com">autotur.by@gmail.com</a></p>
             </div>
         </div>
         <div class="clearfix"></div>

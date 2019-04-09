@@ -502,10 +502,8 @@ option{
 	    padding: 4em 2em;
 }
 .jarallax__ticket{
-	min-height: 150px;
-    position: relative;
+    min-height: 360px;
     background-color: #ffffff;
-    padding: 1.5em;
     -webkit-box-shadow:  0 0 6px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);;
     box-shadow: 0 0 0.9em 0 rgba(0, 0, 0, 0.1);
@@ -520,90 +518,122 @@ option{
     -moz-transition: box-shadow 0.4s;
     -o-transition: box-shadow 0.4s;
 }
+
+.jarallax__ticket__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 25px;
+    color: #ffff;
+    background: #ad101c;
+}
+.jarallax__ticket__price {
+    font-size: 3em;
+    text-align: center;
+}
+
+.jarallax__ticket__rotate {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 25px;
+    padding: -15px;
+    position: relative;
+    z-index: 1;
+}
+.jarallax__ticket__rotate::before {
+    content:"";
+    width: 100%;
+    height: calc(100% + 26px);
+    position: absolute;
+    top: -13px;
+    left: 0px;
+    z-index: -1;
+    background: rgba(0, 0, 0, 0.03);
+    transform: skew(0deg, 2deg);
+}
+
+
+.jarallax__ticket__point,
+.jarallax__ticket__additional{
+    padding: 0 25px;
+    text-align: left;
+    font-weight: 500;
+    text-transform: none;
+}
+.jarallax__ticket__point {
+    color: #373a3c;
+    margin-bottom: 1em;
+}
+.jarallax__ticket__point i,
+.jarallax__ticket__additional i {
+    color: #ad101c;
+    padding-right: 0.5em;
+}
+
 .jarallax__ticket__datetime {
     color: #373a3c;
-	border-right: 0.1em solid #ebebeb;
     text-align: center;
-    float: left;
-    position: relative;
-    background-color: #ffffff;
+    margin: 10px auto;
+    margin-bottom: 20px;
 }
 .jarallax__ticket__datetime .datetime {
     font-size: 25px;
     line-height: 1;
-    text-align: left;
+    text-align: center;
+    margin: 0 auto;
+    height: 1.1em;
+    display: table;
 }
-.jarallax__ticket__datetime .datetime > span {
+.jarallax__ticket__datetime .datetime li {
+    float: left;
+    position: relative;
+    margin-right: 50px;
+}
+.jarallax__ticket__datetime .datetime span.time {
     font-size: 14px;
-   /* border-bottom: 0.1em solid #ad101c;*/
     transform: translateY(-0.3em);
     position: absolute;
-    padding: 0 0.2em;
-    right: .5em;
+    top: 0;
+}
+.jarallax__ticket__datetime .datetime .arrows {
+    margin-right: 15px;
+}
+.jarallax__ticket__datetime .datetime .arrows span{
+    font-size: 14px;
+    transform: translateY(-0.3em);
 }
 .jarallax__ticket__datetime .datetime__icon {
     text-align: left;
     padding-left: 2em;
 }
-.jarallax__ticket__info{
-    float: left;
-    position: relative;
-    padding: 0 0.9em;
-}
 
-.jarallax__ticket__info .title {
-    font-size: 22px;
-    line-height: 1;
-    text-align: left;
-    color: #cd051c;
-    font-weight: 600;
-}
-.jarallax__ticket__info .point {
-    color: #373a3c;
-    padding-top: 1em;
-}
-.jarallax__ticket__info .additional {
-    display: inline-block;
-    position: absolute;
-    right: 1em;
-    top: 0;
-}
 
-.jarallax__ticket__info .additional ul {
+.jarallax__ticket__additional ul {
     font-size: 14px;
 }
-.jarallax__ticket__info .additional ul li:first-child {
+.jarallax__ticket__additional ul li:first-child {
     margin-bottom: 1em;
     font-weight: 600;
     line-height: 1;
-}
-.jarallax__ticket__info .additional ul li:not(:first-child):after {
-    position: absolute;
-    left: -1em;
-    display: block;
-    width: 7px;
-    height: 7px;
-    background-color: #ffffff;
-    border: .1em solid #ad101c;
-    border-radius: 50%;
-    content: "";
-    transform: translateY(-50%);
-    margin-top: -0.7em;
-}
-
-.jarallax__ticket__info .point div > i{
-    margin-right: 0.8em;
-    color: #ad101c
+    text-align: center;
 }
 
 .jarallax__ticket__order {
-    position: relative;
     float: left;
+    margin-top: 2em;
+    width: 100%;
 }
-.jarallax__ticket__order .price {
-    font-size: 22px;
+.jarallax__ticket__order .button {
     text-align: center;
+    margin: 0 auto;
+    height: 1.1em;
+    display: table;
 }
+.carousel-indicators {
+    display: none;
+}
+
 /*tickets*/
 /*-- direction--*/
 h3.agileits-title {
@@ -970,7 +1000,7 @@ p.agile-tab-txt {
 }
 .feature-txt h4 {
     text-transform: capitalize;
-    font-size: 25px;
+    font-size: 20px;
     color: #ffffff;
     padding: 0.5em 1.8em;
     background: #ad101c;
@@ -1776,13 +1806,6 @@ input.email {
 	.contact-form input[type="text"], .contact-form input[type="email"] {
 		width: 48.8%;
 	}
-    .jarallax__ticket {
-        min-height: 280px;
-    }
-    .jarallax__ticket__info .additional {
-        top: 100px;
-        left: 25px;
-    }
 }
 @media screen and (max-width: 1050px){
 	.banner1 {
@@ -1960,49 +1983,6 @@ input.email {
 	.box {
 		padding: 2em 1.5em;
 	}
-    .jarallax__ticket__info {
-        padding-top: 25px;
-    }
-    .jarallax__ticket__order {
-        position: absolute;
-        bottom: 15px;
-        right: 0;
-        display:inline;
-        text-align: right;
-    }
-    .jarallax__ticket__order .price {
-        text-align: center;
-        font-size: 25px;
-        color: #ad101c;
-        display: inline;
-    }
-    .jarallax__ticket__datetime {
-        text-align: right;
-    }
-    .jarallax__ticket__datetime .datetime {
-        font-size: 22px;
-        display: inline;
-        text-align: right;
-    }
-    .jarallax__ticket__datetime .datetime__icon {
-        display: inline;
-    }
-    .jarallax__ticket__order .button {
-        margin-top: 0.5em;
-        display: inline;
-    }
-    .jarallax__ticket__info .point {
-        width: 100%;
-    }
-    .jarallax__ticket__datetime .datetime > span {
-        right: inherit;
-    }
-    .jarallax__ticket__info .additional {
-        top: 115px;
-    }
-    .jarallax__ticket__info .additional ul li:first-child {
-        margin-bottom: 0.2em;
-    }
 }
 @media screen and (max-width: 900px){
 	.banner-posit {
@@ -2112,9 +2092,6 @@ input.email {
     .agileinfo-abt-btm {
         background: url(../images/slide2.jpg) no-repeat right;
         background-size: cover
-    }
-    .jarallax__ticket {
-        padding: 1em;
     }
 }
 @media screen and (max-width: 736px){
@@ -2478,13 +2455,6 @@ input.email {
 	.contact-form input[type="submit"] { 
 		font-size: 0.9em; 
 	}
-
-    .jarallax__ticket__info .additional {
-        top: 165px;
-    }
-    .jarallax__ticket {
-        min-height: 350px;
-    }
 }
 @media screen and (max-width: 414px){
 	.book-form h3 {
@@ -2654,21 +2624,6 @@ input.email {
 	.contact-right {
 		padding: 0;
 	}
-    .jarallax__ticket__info .title {
-        font-size: 18px;
-    }
-    .jarallax__ticket__datetime .datetime {
-        font-size: 1.5em;
-    }
-    .jarallax__ticket__info {
-        padding-top: 35px;
-    }
-    .jarallax__ticket__info .additional {
-        top: 135px;
-    }
-    .jarallax__ticket__order .price {
-        font-size: 18px;
-    }
     span.h3-w3l {
         font-size: 25px;
     }
@@ -2681,13 +2636,6 @@ input.email {
 
 h2.resp-tab-active, h2.resp-accordion {
     background: #ad101c !important;
-}
-
-
-@media only screen and (max-width: 568px) {
-    .jarallax__ticket__info {
-        position: absolute;
-    }
 }
 
 .has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {

@@ -19,10 +19,10 @@ $this->title = $dictionary['title'];
 <!-- tickets-->
 <div class="jarallax w3ls-section w3ls-tickets" id="schedule">
     <?php
-    if ($this->beginCache(Yii::$app->request->absoluteUrl . "_schedule", ['duration' => 3600])) {
+    //if ($this->beginCache(Yii::$app->request->absoluteUrl . "_schedule", ['duration' => 3600])) {
         echo $this->render("_schedule", ['provider' => $provider]);
-        $this->endCache();
-    }
+   //     $this->endCache();
+  //  }
     ?>
 </div>
 <!-- //tickets-->
@@ -60,7 +60,7 @@ $this->title = $dictionary['title'];
 </div>
 
 <!-- //agents section -->
-<!-- subscribe -->
+<!-- subscribe
 <div class="jarallax w3ls-section wthree-sub subscribe">
     <div class="container">
         <h3 class="agileits-title">Подписаться<span> на рассылку</span></h3>
@@ -71,9 +71,9 @@ $this->title = $dictionary['title'];
         </form>
     </div>
 </div>
-<!-- //subscribe -->
+//subscribe -->
 <!-- contact -->
-<div class="jarallax w3ls-section contact" id="contact">
+<div class="jarallax w3ls-section contact w3ls-features" id="contact">
     <?php echo $this->render("_contact", ['model'=>$contact]); ?>
 </div>
 <!-- //contact -->
