@@ -83,7 +83,7 @@ $dictionary = (Dictionary::getInstance())->dictionary;
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
                     <nav class="menu menu--miranda">
                         <ul class="nav navbar-nav menu__list">
-                            <li class="menu__item"><a href="#header" class="menu__link">Главная</a></li>
+                            <li class="menu__item"><a class="menu__link">Главная</a></li>
                             <li class="menu__item"><a href="#schedule" class="scroll menu__link">Расписание</a></li>
                             <li class="menu__item"><a href="#direction" class="scroll menu__link">Направления</a></li>
                             <li class="menu__item"><a href="#gallery" class="scroll menu__link">Галерея</a></li>
