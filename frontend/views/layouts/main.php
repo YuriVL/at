@@ -26,8 +26,8 @@ $dictionary = (Dictionary::getInstance())->dictionary;
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="<?php $dictionary['keywords']?>">
-    <meta name="description"  content="<?php $dictionary['description']?>">
+    <meta name="keywords" content="<?= $dictionary['keywords']?>">
+    <meta name="description"  content="<?= $dictionary['description']?>">
     <?php $this->registerCsrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
 
