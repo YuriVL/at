@@ -8,4 +8,4 @@ Yii::setAlias('@console', dirname(dirname(__DIR__)) . '/console');
  * Setting url aliases
  */
 Yii::setAlias('@frontendUrl', 'http://auto-tur.by');
-Yii::setAlias('@backendUrl', 'http://admin.auto-tur.by');
+Yii::setAlias('@backendUrl', 'http://auto-tur.by/admin');
