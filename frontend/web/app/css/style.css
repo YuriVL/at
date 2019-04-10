@@ -502,7 +502,7 @@ option{
 	    padding: 4em 2em;
 }
 .jarallax__ticket{
-    min-height: 430px;
+    min-height: 450px;
     background-color: #ffffff;
     -webkit-box-shadow:  0 0 6px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);;
@@ -541,6 +541,7 @@ option{
     padding: -15px;
     position: relative;
     z-index: 1;
+    min-height: 175px;
 }
 .jarallax__ticket__rotate::before {
     content:"";
