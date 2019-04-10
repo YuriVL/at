@@ -8,12 +8,12 @@
 
 namespace backend\models;
 
-use common\models\SystemLD;
+use common\models\SystemLd;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 
 
-class VoyageSearch extends SystemLD
+class VoyageSearch extends SystemLd
 {
     /**
      * {@inheritdoc}
