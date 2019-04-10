@@ -31,7 +31,7 @@ use common\models\User;
                     [
                         'label' => 'Рейсы',
                         'icon' => 'calendar',
-                        'url' => ['voyage/index'],
+                        'url' => ['system-ld/index'],
                         'visible' => !Yii::$app->user->isGuest,
                     ],
                     [

@@ -61,4 +61,20 @@ class SystemTime extends \yii\db\ActiveRecord
     {
         return new SystemTimeQuery(get_called_class());
     }
+    public static function getTimes()
+    {
+        return self::getDb()->cache(function () {
+            return self::find()->all();
+        });
+    }
+
+    public static function getCompliteTimes()
+    {
+        $times = self::getTimes();
+        $complite = [];
+        foreach ($times as $key=>$value){
+            $complite[$value['id']]=$value['time_dispatch'] . ' -> ' .$value['time_arrival'];
+        }
+        return $complite;
+    }
 }

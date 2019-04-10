@@ -26,7 +26,8 @@
         "asofter/yii2-imperavi-redactor": "*",
         "kartik-v/yii2-widget-datepicker": "dev-master",
         "zxbodya/yii2-gallery-manager": "*@dev",
-        "rmrevin/yii2-minify-view": "^2.0"
+        "rmrevin/yii2-minify-view": "^2.0",
+        "janisto/yii2-timepicker": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

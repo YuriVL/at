@@ -6,8 +6,8 @@ use frontend\models\Dictionary;
 use yii\helpers\Html;
 
 
-$date_dispatch = new \DateTime($model['dispatch'] . ' ' . $model['time_dispatch']);
-$date_arrival = new \DateTime($model['arrival'] . ' ' . $model['time_arrival']);
+$date_dispatch = new \DateTime(date('Y-m-d') . ' ' . $model['time_dispatch']);
+$date_arrival = new \DateTime(date('Y-m-d') . ' ' . $model['time_arrival']);
 
 $dictionary = (Dictionary::getInstance())->dictionary;
 
@@ -33,10 +33,10 @@ if (in_array($model['iddirection'], [2, 6])) {
     $pointend = $dictionary['pointmoscow'];
 }
 $price = (in_array($model['iddirection'], [2, 4, 6]))
-    ? ($model['price'] * 40) . " RUB"
+    ? ($model['price']) . " RUB"
     : ($model['price']) . " BYN";
 ?>
-<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="col-md-3 col-sm-6 col-xs-12">
     <div class="jarallax__ticket">
 
         <div class="jarallax__ticket__title"><?= $model['direction'] ?></div>
@@ -45,11 +45,10 @@ $price = (in_array($model['iddirection'], [2, 4, 6]))
 
         <div class="jarallax__ticket__datetime">
             <ul class="datetime at list-unstyled">
-                <li><?= $date_dispatch->format('d.m') ?><span class="time"><?= $date_dispatch->format('H.i') ?></span>
+                <li><?= $date_dispatch->format('H.i') ?>
                 </li>
-                <li class="arrows"><span class="fa fa-arrows-h"></span></li>
-                <li><?= $date_arrival->format('d.m') ?><span class="time"><?= $date_arrival->format('H.i') ?></span>
-                </li>
+                <li class="arrows"><span class="fa fa-arrows-h"></li>
+                <li><?= $date_arrival->format('H.i') ?></li>
             </ul>
         </div>
 
@@ -77,7 +76,7 @@ $price = (in_array($model['iddirection'], [2, 4, 6]))
                 echo Html::a('Бронировать', '#', [
                     "data-toggle" => "modal",
                     "data-target" => "#bookingModal",
-                    "data-book_date" => $date_dispatch->format('d-m-Y'),
+                    //"data-book_date" => $date_dispatch->format('d-m-Y'),
                     "data-book_direction" => $model['iddirection']
                 ])
                 ?>

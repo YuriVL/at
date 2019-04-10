@@ -19,10 +19,10 @@ $this->title = $dictionary['title'];
 <!-- tickets-->
 <div class="jarallax w3ls-section w3ls-tickets" id="schedule">
     <?php
-    if ($this->beginCache(Yii::$app->request->absoluteUrl . "_schedule", ['duration' => 3600])) {
+   // if ($this->beginCache(Yii::$app->request->absoluteUrl . "_schedule", ['duration' => 3600])) {
         echo $this->render("_schedule", ['provider' => $provider]);
-       $this->endCache();
-    }
+       //$this->endCache();
+   // }
     ?>
 </div>
 <!-- //tickets-->

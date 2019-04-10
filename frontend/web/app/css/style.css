@@ -502,7 +502,7 @@ option{
 	    padding: 4em 2em;
 }
 .jarallax__ticket{
-    min-height: 360px;
+    min-height: 430px;
     background-color: #ffffff;
     -webkit-box-shadow:  0 0 6px 0 rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.1);;
@@ -526,6 +526,7 @@ option{
     font-size: 25px;
     color: #ffff;
     background: #ad101c;
+    min-height: 75px;
 }
 .jarallax__ticket__price {
     font-size: 3em;
@@ -588,7 +589,7 @@ option{
 .jarallax__ticket__datetime .datetime li {
     float: left;
     position: relative;
-    margin-right: 50px;
+    margin-right: 10px;
 }
 .jarallax__ticket__datetime .datetime span.time {
     font-size: 14px;

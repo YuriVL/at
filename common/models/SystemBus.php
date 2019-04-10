@@ -65,4 +65,21 @@ class SystemBus extends \yii\db\ActiveRecord
     {
         return new SystemBusQuery(get_called_class());
     }
+
+    public static function getBuses()
+    {
+        return self::getDb()->cache(function () {
+            return self::find()->all();
+        });
+    }
+
+    public static function getCompliteBuses()
+    {
+        $times = self::getBuses();
+        $complite = [];
+        foreach ($times as $key=>$value){
+            $complite[$value['id']]=$value['bus'] . ' -> ' .$value['numbus'];
+        }
+        return $complite;
+    }
 }
