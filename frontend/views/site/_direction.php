@@ -1,13 +1,13 @@
 <?php
 
 use frontend\models\Dictionary;
-
+use common\models\Page;
 
 $pages = (Dictionary::getInstance())->pages;
 $direction = false;
 foreach ($pages as $page){
     /** $page \common\models\Page */
-    if($page->category_id == 1){
+    if($page->category_id == Page::CAT_DIRECTION){
         $direction = $page;
         break;
     }

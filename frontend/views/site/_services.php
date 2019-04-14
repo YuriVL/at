@@ -1,5 +1,6 @@
 <?php
 
+use common\models\Page;
 use frontend\models\Dictionary;
 use zxbodya\yii2\galleryManager\GalleryImage;
 
@@ -16,7 +17,7 @@ $pages = (Dictionary::getInstance())->pages;
                 <?php
                 foreach ($pages as $key => $page) {
                     /** $page \common\models\Page */
-                    if ($page->category_id != 2) {
+                    if ($page->category_id != Page::CAT_SERVICES) {
                         continue;
                     } else {
                         ?>

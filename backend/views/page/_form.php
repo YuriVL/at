@@ -3,6 +3,7 @@
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use zxbodya\yii2\galleryManager\GalleryManager;
+use common\models\Page;
 
 /* @var $this yii\web\View */
 /* @var $model common\models\Page */
@@ -17,7 +18,7 @@ use zxbodya\yii2\galleryManager\GalleryManager;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'category_id')->textInput(['maxlength' => true]) ?>
+    <?= $form->field($model, 'category_id')->dropDownList(Page::$category); ?>
 
     <?= $form->field($model, 'image')->textInput(['maxlength' => true]) ?>
 

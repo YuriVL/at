@@ -19,6 +19,17 @@ use zxbodya\yii2\galleryManager\GalleryBehavior;
  */
 class Page extends \yii\db\ActiveRecord
 {
+    const CAT_DIRECTION = 1;
+    const CAT_SERVICES = 2;
+    const CAT_GALLERY = 3;
+    const CAT_STOCK= 4;
+
+    public static $category = [
+        self::CAT_DIRECTION => 'Направления',
+        self::CAT_SERVICES => 'Услуги',
+        self::CAT_GALLERY => 'Галерея',
+        self::CAT_STOCK => 'Акция',
+    ];
     /**
      * @inheritdoc
      */

@@ -2,6 +2,7 @@
 
 use frontend\models\Dictionary;
 use yii\helpers\Html;
+use common\models\Page;
 
 $pages = (Dictionary::getInstance())->pages;
 
@@ -13,7 +14,7 @@ $pages = (Dictionary::getInstance())->pages;
     <div class="gallery-w3lsrow">
         <?php
         foreach ($pages as $key => $page) {
-            if ($page->category_id != 3) {
+            if ($page->category_id != Page::CAT_GALLERY) {
                 continue;
             }
             /** $page \common\models\Page */

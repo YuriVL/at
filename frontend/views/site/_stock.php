@@ -1,12 +1,13 @@
 <?php
 
 use frontend\models\Dictionary;
+use common\models\Page;
 
 $pages = (Dictionary::getInstance())->pages;
 $stock = false;
 foreach ($pages as $page) {
     /** $page \common\models\Page */
-    if ($page->category_id == 4) {
+    if ($page->category_id == Page::CAT_STOCK) {
         $stock = $page;
         break;
     }
