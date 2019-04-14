@@ -497,6 +497,43 @@ option{
 .right-agileits{
 	margin-left:9px;
 }
+/*stock*/
+.stock__wrap {
+    margin-top: 25px;
+    background: linear-gradient(90deg, #EFEFE7 50%, #ad101c 50%);
+    position: relative;
+    padding: 40px;
+    box-sizing: border-box;
+}
+.stock__wrap:before,
+.stock__wrap:after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 10px;
+    background: linear-gradient(90deg, #ad101c 50%, #EFEFE7 50%);
+    left: 25%;
+}
+.stock__wrap:before {top: 15px;}
+.stock__wrap:after {bottom: 15px;}
+.stock__text {
+    background: #ffffff;
+    margin: 0;
+    padding: 30px 0;
+    text-align: center;
+}
+.stock__text h2 {
+    color: #373a3c;
+    font-size: 40px;
+    line-height: 1.5;
+}
+.stock__text p {
+    color: #373a3c;
+    font-size: 16px;
+    text-align: center;
+}
+/*stock*/
+
 /*tickets*/
 .w3ls-tickets {
 	    padding: 4em 2em;

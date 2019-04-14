@@ -1,6 +1,7 @@
 <?php
 
 use frontend\models\Dictionary;
+use zxbodya\yii2\galleryManager\GalleryImage;
 
 $pages = (Dictionary::getInstance())->pages;
 ?>
@@ -35,7 +36,10 @@ $pages = (Dictionary::getInstance())->pages;
                         continue;
                     } else {
                         $image = $page->getBehavior('galleryBehavior')->getImages();
-                        $url = $image[0]->getUrl('medium') ?? '';
+                        $url = "";
+                        if(isset($image[0]) && $image[0] instanceof GalleryImage){
+                            $url = $image[0]->getUrl('medium') ?? '';
+                        }
                         ?>
                         <div>
                             <div class="col-md-8 tabs-right1">

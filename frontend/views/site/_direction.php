@@ -4,7 +4,7 @@ use frontend\models\Dictionary;
 
 
 $pages = (Dictionary::getInstance())->pages;
-
+$direction = false;
 foreach ($pages as $page){
     /** $page \common\models\Page */
     if($page->category_id == 1){
