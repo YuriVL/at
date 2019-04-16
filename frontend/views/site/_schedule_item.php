@@ -2,6 +2,8 @@
 
 /* @var $model $array */
 
+/* @var $count $integer */
+
 use frontend\models\Dictionary;
 use yii\helpers\Html;
 
@@ -35,8 +37,9 @@ if (in_array($model['iddirection'], [2, 6])) {
 $price = (in_array($model['iddirection'], [2, 4, 6]))
     ? ($model['price']) . " RUB"
     : ($model['price']) . " BYN";
+$md = ($count > 4) ? '4' : '3';
 ?>
-<div class="col-md-4 col-sm-6 col-xs-12">
+<div class="col-md-<?= $md ?> col-sm-6 col-xs-12">
     <div class="jarallax__ticket">
 
         <div class="jarallax__ticket__title"><?= $model['direction'] ?></div>

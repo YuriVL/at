@@ -25,11 +25,15 @@ if ($cols > 0) {
         <?php
         $begin = 0;
         for ($i = 0; $i < $cols; $i++) { ?>
-            <div class="jarallax item <?= ($i == 0) ? "active" : ""?>">
+            <div class="jarallax item <?= ($i == 0) ? "active" : "" ?>">
                 <?php
                 $slice = array_slice($models, $begin, $limit);
+                $count = count($models);
                 foreach ($slice as $model) {
-                    echo $this->render('_schedule_item', ['model' => $model]);
+                    echo $this->render('_schedule_item', [
+                        'model' => $model,
+                        'count' => $count
+                    ]);
                 }
                 $begin += $limit;
                 ?>
