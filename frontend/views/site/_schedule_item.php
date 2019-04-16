@@ -36,7 +36,7 @@ $price = (in_array($model['iddirection'], [2, 4, 6]))
     ? ($model['price']) . " RUB"
     : ($model['price']) . " BYN";
 ?>
-<div class="col-md-3 col-sm-6 col-xs-12">
+<div class="col-md-4 col-sm-6 col-xs-12">
     <div class="jarallax__ticket">
 
         <div class="jarallax__ticket__title"><?= $model['direction'] ?></div>
@@ -56,8 +56,14 @@ $price = (in_array($model['iddirection'], [2, 4, 6]))
 
             <div class="jarallax__ticket__point">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker"></i><?= $pointbegin ?? '' ?></li>
-                    <li><i class="fa fa-map-marker"></i><?= $pointend ?? '' ?></li>
+                    <?php if (isset($pointbegin)) { ?>
+                        <li><i class="fa fa-map-marker"></i><?= $pointbegin ?? '' ?></li>
+                        <?php
+                    }
+                    if (isset($pointend)) { ?>
+                        <li><i class="fa fa-map-marker"></i><?= $pointend ?? '' ?></li>
+                    <?php } ?>
+                </ul>
             </div>
             <div class="jarallax__ticket__additional">
                 <ul class="list-unstyled">
