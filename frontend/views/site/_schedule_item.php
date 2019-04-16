@@ -33,8 +33,14 @@ if (in_array($model['iddirection'], [2, 6])) {
 } elseif ($model['iddirection'] == 5) {
     $pointbegin = $dictionary['pointorsha'];
     $pointend = $dictionary['pointmoscow'];
+} elseif ($model['iddirection'] == 7) {
+    $pointbegin = $dictionary['pointshklov'];
+    $pointend = $dictionary['pointmoscow'];
+} elseif ($model['iddirection'] == 8) {
+    $pointbegin = $dictionary['pointmoscow'];
+    $pointend = $dictionary['pointshklov'];
 }
-$price = (in_array($model['iddirection'], [2, 4, 6]))
+$price = (in_array($model['iddirection'], [2, 4, 6, 8]))
     ? ($model['price']) . " RUB"
     : ($model['price']) . " BYN";
 $md = ($count > 4) ? '4' : '3';
