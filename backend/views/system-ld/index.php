@@ -93,7 +93,7 @@ $tdispatch = $searchModel->time_dispatch ?? '';
                 'template' => '{update}',
                 'buttons' => [
                     'update' => function ($url, $model, $key) {
-                        $url = \Yii::$app->urlManager->createUrl(['/system-ld/update?id=' . $model['id']]);
+                        $url = \Yii::$app->urlManager->createUrl(['system-ld/update?id=' . $model['id']]);
                         return Html::a(Html::tag("span", "", ["class" => "glyphicon glyphicon-pencil"]),
                             $url);
                     }
