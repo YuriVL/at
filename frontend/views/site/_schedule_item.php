@@ -56,8 +56,8 @@ $price = (in_array($model['iddirection'], [2, 4, 6]))
 
             <div class="jarallax__ticket__point">
                 <ul class="list-unstyled">
-                    <li><i class="fa fa-map-marker"></i><?= $pointbegin ?></li>
-                    <li><i class="fa fa-map-marker"></i><?= $pointend ?></li>
+                    <li><i class="fa fa-map-marker"></i><?= $pointbegin ?? '' ?></li>
+                    <li><i class="fa fa-map-marker"></i><?= $pointend ?? '' ?></li>
             </div>
             <div class="jarallax__ticket__additional">
                 <ul class="list-unstyled">

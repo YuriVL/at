@@ -85,10 +85,21 @@ $tdispatch =  $searchModel->time_dispatch ?? '';
                 },
                 'filter' => SystemLD::getStatuses()
             ],
-            //'created_at',
-            //'updated_at',
-
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{update} {delete}',
+                'buttons' => [
+                    'update' => function ($url, $model, $key) {
+                        return Html::a(Html::tag("span", "", ["class"=>"glyphicon glyphicon-pencil"]),
+                            '/system-ld/update?id='.$model['id']);
+                    },
+                    'delete' => function ($url, $model, $key) {
+                        return Html::a(Html::tag("span", "", ["class"=>"glyphicon glyphicon-trash"]),
+                            '/system-ld/update?id='.$model['id']);
+                    },
+                ],
+                'template' => '{approve} {answer} {update} {delete}',
+            ],
         ],
     ]); ?>
     <?php Pjax::end(); ?>
