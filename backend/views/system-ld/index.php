@@ -5,16 +5,19 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use yii\helpers\ArrayHelper;
 use janisto\timepicker\TimePicker;
-use common\models\{SystemDirection, SystemPrice, SystemLD, SystemBooking,SystemBus,SystemTime};
+use common\models\{
+    SystemDirection, SystemPrice, SystemLD, SystemBooking, SystemBus, SystemTime
+};
 use kartik\date\DatePicker;
+
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\SystemLdSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Рейсы';
 $this->params['breadcrumbs'][] = $this->title;
-$tarrival =  $searchModel->time_arrival ?? '';
-$tdispatch =  $searchModel->time_dispatch ?? '';
+$tarrival = $searchModel->time_arrival ?? '';
+$tdispatch = $searchModel->time_dispatch ?? '';
 ?>
 <div class="system-ld-index">
 
@@ -34,14 +37,14 @@ $tdispatch =  $searchModel->time_dispatch ?? '';
                 'attribute' => 'time_dispatch',
                 'value' => function ($model) {
                     $str = '';
-                    if(!empty($model['time_dispatch'])){
+                    if (!empty($model['time_dispatch'])) {
                         $str = (new \DateTime($model['time_dispatch']))->format('H:i');
                     }
                     return $str;
                 },
-                'filter' =>   TimePicker::widget([
-                    'name'  => 'time_dispatch',
-                    'value'  => $tdispatch,
+                'filter' => TimePicker::widget([
+                    'name' => 'time_dispatch',
+                    'value' => $tdispatch,
                     'mode' => 'time',
                 ]),
 
@@ -50,33 +53,33 @@ $tdispatch =  $searchModel->time_dispatch ?? '';
                 'attribute' => 'time_arrival',
                 'value' => function ($model) {
                     $str = '';
-                    if(!empty($model['time_arrival'])){
+                    if (!empty($model['time_arrival'])) {
                         $str = (new \DateTime($model['time_arrival']))->format('H:i');
                     }
                     return $str;
                 },
-                'filter' =>   TimePicker::widget([
-                    'name'  => 'time_dispatch',
-                    'value'  => $tarrival,
+                'filter' => TimePicker::widget([
+                    'name' => 'time_dispatch',
+                    'value' => $tarrival,
                     'mode' => 'time',
                 ]),
             ],
             [
-                'attribute'=>'direction',
+                'attribute' => 'direction',
                 'filter' => ArrayHelper::map(SystemDirection::getDirections(), 'id', 'direction')
             ],
             [
-                'attribute'=>'bus',
+                'attribute' => 'bus',
                 'filter' => ArrayHelper::map(SystemBus::getBuses(), 'id', 'bus')
             ],
             [
-                'attribute'=>'price',
+                'attribute' => 'price',
                 'filter' => ArrayHelper::map(SystemPrice::getPrices(), 'id', 'price')
             ],
             [
-                'attribute'=>'status',
+                'attribute' => 'status',
                 'value' => function ($model) {
-                    if(!empty($model['status'] == 1)){
+                    if (!empty($model['status'] == 1)) {
                         $str = 'Действует';
                     } else {
                         $str = 'Не действует';
@@ -88,12 +91,13 @@ $tdispatch =  $searchModel->time_dispatch ?? '';
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{update}',
-                'buttons' => [
+                /*'buttons' => [
                     'update' => function ($url, $model, $key) {
-                        return Html::a(Html::tag("span", "", ["class"=>"glyphicon glyphicon-pencil"]),
-                            '/system-ld/update?id='.$model['id']);
+                        $url = \Yii::$app->urlManager->createUrl(['/system-ld/update?id=' . $model['id']]);
+                        return Html::a(Html::tag("span", "", ["class" => "glyphicon glyphicon-pencil"]),
+                            $url);
                     }
-                ],
+                ],*/
             ],
         ],
     ]); ?>
