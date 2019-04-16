@@ -91,13 +91,13 @@ $tdispatch = $searchModel->time_dispatch ?? '';
             [
                 'class' => 'yii\grid\ActionColumn',
                 'template' => '{update}',
-                /*'buttons' => [
+                'buttons' => [
                     'update' => function ($url, $model, $key) {
-                        $url = \Yii::$app->urlManager->createUrl(['/system-ld/update?id=' . $model['id']]);
+                        $url = \Yii::$app->urlManager->createUrl(['http://auto-tur.by/backend/web/system-ld/update?id=' . $model['id']]);
                         return Html::a(Html::tag("span", "", ["class" => "glyphicon glyphicon-pencil"]),
                             $url);
                     }
-                ],*/
+                ],
             ],
         ],
     ]); ?>
